@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <title>オブジェクト指向部　OP</title>
+    <style>
+      html{
+        font-size: 62.5%;
+        font-family: 'DotGothic16', sans-serif;
+      }
+      body{
+        margin: 0 auto;
+        background: #fbfbfa;
+        text-align: center;
+        font-size: 1.6rem;
+      }
+      .main-area{
+        width: 50%;
+        margin: 2.5rem auto;
+        color: #fff;
+        background: #141414;
+      }
+      input[type='submit']{
+        border: none;
+        padding: 1.5rem;
+        background: none;
+        color: #fff;
+        cursor:pointer;
+        font-family: 'DotGothic16', sans-serif;
+      }
+      input[type='submit']:hover{
+        background: #999696;
+      }
+      .content{
+        display: flex;
+        position: relative;
+      }
+      .command{
+        width: 30%;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 2px solid #fff;
+        margin-left: 9rem;
+        margin-bottom: 2rem;
+      }
+      .player{
+        border: 2px solid #fff;
+        position: absolute;
+        right: 14%;
+        padding: 1rem 3rem;
+      }
+      .history{
+        margin: 2rem 9rem;
+        padding: 3rem 0;
+        border: 2px solid #fff;
+        box-sizing:border-box;
+        max-height:90px;
+        overflow-y: auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h2>DELICIOUS QUEST</h2>
+    <div class="site-width" style="position: relative;">
+      <div class="main-area">
+        <!--スタート画面-->
+        <h3>GAME START?</h3>
+        <input type="submit" name="start" value="▶︎ゲームスタート">
+        <!--ゲームオーバー画面-->
+        <h3 style="color:#ff244b;">GAME OVER...</h3>
+        <input type="submit" name="start" value="▶︎リトライする">
+        <!--ゲームオーバー画面-->
+        <h3 style="color:#f7c554;">GAME CLEAR!!</h3>
+        <input type="submit" name="start" value="▶︎リトライする">
+
+        <!--職業選択-->
+        <p>職業をえらんでください</p>
+        <input type="submit" name="job-hero" value="　勇者　">
+        <input type="submit" name="job-wizard" value="魔法使い">
+
+        <!--ゲーム画面-->
+        <div class="show">
+          <p>●●　があらわれた！</p>
+          <div class="show-about" style="width:40%; margin:0 auto;">
+            <img src="img/img2.png" style="width:100%; height:auto; box-sizing:border-box; margin:0 auto;">
+            <p style="text-align:left;">モンスターのHP : </p>
+            <p style="text-align:left;">倒したモンスターの数 ： </p>
+          </div>
+          <p class="history">ダメージとか、こうかはばつぐんだ！とかがここに入る<br>ダメージとか、こうかはばつぐんだ！とかがここに入る<br>ダメージとか、こうかはばつぐんだ！とかがここに入る<br>
+          ダメージとか、こうかはばつぐんだ！とかがここに入る<br>ダメージとか、こうかはばつぐんだ！とかがここに入る<br>ダメージとか、こうかはばつぐんだ！とかがここに入る<br></p>
+        </div>
+
+        <div class="content">
+          <!--コマンド-->
+          <div class="command">
+            <!--通常ver-->
+            <input type="submit" name="escape" value="▶︎逃げる　">
+            <input type="submit" name="attack" value="▶︎攻撃する">
+            <input type="submit" name="heal"   value="▶︎回復する"><!--３回までしか使えない-->
+            <!--神様登場時の選択肢ver-->
+            <input type="submit" name="god-heal"       value="▶︎回復してもらう　">
+            <input type="submit" name="god-power"      value="▶︎強くしてもらう　">
+            <input type="submit" name="god-defense"    value="▶︎丈夫にしてもらう">
+
+            <input type="submit" name="start" value="▶︎ゲームリスタート">
+          </div>
+
+          <!--プレイヤー情報-->
+          <div class="player" >
+            <p style="margin:0; margin-bottom:3rem;">勇者A</p>
+            <p>HP : 100</p>
+            <p>MP : 100</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
